@@ -1,0 +1,29 @@
+/* skills.component.css */
+section {
+  padding: 2rem;
+}
+
+.skill-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.skill-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 1rem;
+}
+
+.skill-info {
+  flex-grow: 1;
+  margin-left: 1rem; /* Add margin between icon and skill info */
+}
+
+/* Increase the icon size */
+.fa-2x {
+  font-size: 2em;
+}
+
+/* Add additional styling as needed */

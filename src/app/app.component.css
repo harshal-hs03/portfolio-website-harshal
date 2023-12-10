@@ -1,0 +1,16 @@
+/* home.component.css */
+section {
+  padding: 2rem;
+}
+
+.brief-description {
+  margin-top: 150px;
+  text-align: center;
+}
+
+.brief-description h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Add additional styling as needed for Skills, Projects, and Contact sections */

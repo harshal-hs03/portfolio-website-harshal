@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #2c3e50;  /* Set your primary color */
+  --secondary-color: #2ecc71;  /* Set your secondary color */
+  --background-color: #ecf0f1;  /* Set your background color */
+  --text-color: #2c3e50;  /* Set your text color */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.5s, color 0.5s;
+  padding-top: 90px; /* Adjust the value based on the height of your fixed header */
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.dark-theme {
+  background-color: #393a41;
+  color: #d9d9d9;
+}
+
+
+a {
+  color: #3498db; /* Set the desired color for the links */
+  text-decoration: none; /* Remove underlines */
+  transition: color 0.3s ease; /* Add a smooth transition effect for color changes */
+}
+
+a:hover {
+  color: #2980b9; /* Change the color on hover */
+}

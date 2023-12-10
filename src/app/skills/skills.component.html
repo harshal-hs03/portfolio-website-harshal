@@ -1,0 +1,15 @@
+<!-- skills.component.html -->
+<section class="skills-container">
+  <h2 data-aos="fade-up-right" data-aos-duration="1500" data-aos-offset="500">Skills</h2>
+  <div class="skill-list" data-aos="fade-up-left" data-aos-duration="1000" data-aos-offset="500">
+
+    <div class="skill-card" *ngFor="let skill of skills" >
+      <i [ngClass]="['fas', skill.iconClass, 'fa-2x']"></i> <!-- Increase size with 'fa-2x' -->
+      <div class="skill-info">
+        <h3>{{ skill.title }}</h3>
+        <p>{{ skill.description }}</p>
+      </div>
+    </div>
+
+  </div>
+</section>
