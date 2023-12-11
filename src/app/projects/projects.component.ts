@@ -29,7 +29,7 @@ export class ProjectsComponent {
     {
       name: 'Better-Reads',
       description: 'Web app to track book reading',
-      techStack: 'Spring Boot, NoSql, Java, Bootstrap, HTML, CSS, JS',
+      techStack: 'Spring Boot, NoSql, Java, REST, Bootstrap, HTML, CSS, JS',
       url: 'https://github.com/harshal-hs03/Better-Reads',
     },
     {
@@ -57,6 +57,12 @@ export class ProjectsComponent {
       url: 'https://github.com/harshal-hs03/Sudoku-Solver',
     },
     {
+      name: 'Location-Update Using Kafka',
+      description: 'Location Update Application where location is updated in bulk using Apache Kafka',
+      techStack: 'Apache Kafka, REST, Java, Spring Boot, Maven',
+      url: 'https://github.com/harshal-hs03/LocationUpdateProject',
+    },
+    {
       name: 'Portfolio-Website',
       description: 'Portfolio website that exhibits my expertise and interests',
       techStack: 'Angular, HTML, CSS, Typescript',
@@ -65,6 +71,16 @@ export class ProjectsComponent {
 
     // Add more projects as needed
   ];
+
+  navigateToProject(url: string) {
+    if (url && url.trim() !== '' && !url.includes("example.com")) {
+      // If the URL is provided, navigate to it
+      window.open(url, '_blank');
+    } else {
+      // If the URL is empty, show an alert
+      alert("This was a client-side project. Unfortunately, client-side projects cannot be displayed, and their source code cannot be revealed.");
+    }
+  }
 }
 
 interface Project {

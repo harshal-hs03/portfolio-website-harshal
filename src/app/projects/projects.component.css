@@ -14,6 +14,10 @@ section {
   gap: 1rem;
 }
 
+.view-project-link{
+  cursor: pointer;
+}
+
 .project-card {
   border: 1px solid #ddd;
   padding: 1rem;
