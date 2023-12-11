@@ -15,11 +15,12 @@ header {
 
 .logo-container{
   margin-left: 20px;
+  height: 75px;
 }
 
 .logo-container img {
   max-width: 100%;
-  height: auto;
+  height: 75px;
 }
 
 nav ul {

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { fadeInAnimation } from '../app.animation';
 import { ThemeService } from '../services/theme.service';
 
@@ -12,7 +12,7 @@ import { ThemeService } from '../services/theme.service';
   // animations: [fadeInAnimation],
 })
 export class ProjectsComponent {
-  // constructor(public themeService: ThemeService) {}
+
   projects: Project[] = [
     {
       name: 'Fullscript Integration',
@@ -30,13 +30,37 @@ export class ProjectsComponent {
       name: 'Better-Reads',
       description: 'Web app to track book reading',
       techStack: 'Spring Boot, NoSql, Java, Bootstrap, HTML, CSS, JS',
-      url: 'https://example.com/project3',
+      url: 'https://github.com/harshal-hs03/Better-Reads',
     },
     {
-      name: 'Tic-Tac-Toe and various multiplayer console-mini-games',
-      description: 'Java Console, and JavaFX UI games',
+      name: 'Tic-Tac-Toe UI Game',
+      description: 'JavaFX Tic-Tac-Toe game consisting of single and two player mode in it',
       techStack: 'JavaFX, Java',
-      url: 'https://example.com/project3',
+      url: 'https://github.com/harshal-hs03/Tic-Tac-Toe',
+    },
+    {
+      name: 'Multiplayer console-mini-games',
+      description: 'This project consists of various console games',
+      techStack: 'Java',
+      url: 'https://github.com/harshal-hs03/Console-Games',
+    },
+    {
+      name: 'Todo-List',
+      description: 'Spring Masterclass Course project',
+      techStack: 'Spring MVC, Java, Maven, JSP',
+      url: 'https://github.com/harshal-hs03/todo-list',
+    },
+    {
+      name: 'Sudoku-Solver',
+      description: 'Set the sudoku board with the initial values and detect if it can be solved or not with the result displaying in the console',
+      techStack: 'Java',
+      url: 'https://github.com/harshal-hs03/Sudoku-Solver',
+    },
+    {
+      name: 'Portfolio-Website',
+      description: 'Portfolio website that exhibits my expertise and interests',
+      techStack: 'Angular, HTML, CSS, Typescript',
+      url: 'https://github.com/harshal-hs03/portfolio-website-harshal',
     },
 
     // Add more projects as needed

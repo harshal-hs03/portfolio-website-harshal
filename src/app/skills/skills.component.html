@@ -1,15 +1,78 @@
-<!-- skills.component.html -->
-<section class="skills-container">
-  <h2 data-aos="fade-up-right" data-aos-duration="1500" data-aos-offset="500">Skills</h2>
-  <div class="skill-list" data-aos="fade-up-left" data-aos-duration="1000" data-aos-offset="500">
+<!-- <section class="skills-container">
+  <h2 data-aos="fade-down" data-aos-duration="1500">Skills</h2>
 
-    <div class="skill-card" *ngFor="let skill of skills" >
-      <i [ngClass]="['fas', skill.iconClass, 'fa-2x']"></i> <!-- Increase size with 'fa-2x' -->
-      <div class="skill-info">
-        <h3>{{ skill.title }}</h3>
-        <p>{{ skill.description }}</p>
+  <div class="category-list" *ngFor="let category of skillCategories; let i = index" data-aos="fade-right" data-aos-easing="ease-out-back" data-aos-duration="1000">
+    <div class="category" [ngClass]="{'reverse-order': i % 2 !== 0}">
+      <div class="category-name">
+        <h3 [ngClass]="{'right-aligned': i % 2 !== 0, 'left-aligned': i % 2 === 0}">
+          {{ category.name }}
+        </h3>
+      </div>
+      <div class="skill-list">
+        <ul>
+          <li *ngFor="let skill of category.skills; let j = index">
+            <ng-container *ngIf="j % 3 === 0">
+              <div class="skill-set">
+                <div class="skill" [attr.data-aos]="j % 6 === 0 ? 'fade-right' : (j % 6 === 3 ? 'fade-left' : 'fade-up')" data-aos-easing="ease-out-back" data-aos-duration="1000">
+                  <i [ngClass]="['fas', category.skills[j].iconClass, 'fa-2x']"></i>
+                  <span class="skill-info">
+                    <h4>{{ category.skills[j].title }}</h4>
+                  </span>
+                </div>
+                <div class="skill" *ngIf="j + 1 < category.skills.length" [attr.data-aos]="j % 6 === 1 ? 'fade-right' : (j % 6 === 4 ? 'fade-left' : 'fade-up')" data-aos-easing="ease-out-back" data-aos-duration="1000">
+                  <i [ngClass]="['fas', category.skills[j + 1].iconClass, 'fa-2x']"></i>
+                  <span class="skill-info">
+                    <h4>{{ category.skills[j + 1].title }}</h4>
+                  </span>
+                </div>
+                <div class="skill" *ngIf="j + 2 < category.skills.length" [attr.data-aos]="j % 6 === 2 ? 'fade-right' : (j % 6 === 5 ? 'fade-left' : 'fade-up')" data-aos-easing="ease-out-back" data-aos-duration="1000">
+                  <i [ngClass]="['fas', category.skills[j + 2].iconClass, 'fa-2x']"></i>
+                  <span class="skill-info">
+                    <h4>{{ category.skills[j + 2].title }}</h4>
+                  </span>
+                </div>
+              </div>
+            </ng-container>
+          </li>
+        </ul>
       </div>
     </div>
+  </div>
+</section> -->
 
+
+<section class="skills-container">
+  <h2 data-aos="fade-down" data-aos-duration="1500">Skills</h2>
+
+  <div class="category-list" *ngFor="let category of skillCategories; let i = index" [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'" data-aos-easing="ease-out-back" data-aos-duration="1000">
+    <div class="category" [ngClass]="{'reverse-order': i % 2 !== 0}">
+      <div class="category-name">
+        <h3 [ngClass]="{'right-aligned': i % 2 !== 0, 'left-aligned': i % 2 === 0}">
+          {{ category.name }}
+        </h3>
+      </div>
+      <div class="skill-list" [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'" data-aos-easing="ease-out-back" data-aos-duration="1000">
+        <ul>
+          <li *ngFor="let skill of category.skills; let j = index">
+            <ng-container *ngIf="j % 2 === 0">
+              <div class="skill-pair">
+                <div class="skill">
+                  <i [ngClass]="['fas', category.skills[j].iconClass, 'fa-2x']"></i>
+                  <span class="skill-info">
+                    <h4>{{ category.skills[j].title }}</h4>
+                  </span>
+                </div>
+                <div class="skill" *ngIf="j + 1 < category.skills.length">
+                  <i [ngClass]="['fas', category.skills[j + 1].iconClass, 'fa-2x']"></i>
+                  <span class="skill-info">
+                    <h4>{{ category.skills[j + 1].title }}</h4>
+                  </span>
+                </div>
+              </div>
+            </ng-container>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>

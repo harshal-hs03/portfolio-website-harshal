@@ -1,17 +1,21 @@
 <!-- header.component.html -->
 <header [ngClass]="{ 'dark-theme': themeService.darkTheme$ | async }">
   <div class="logo-container">
-    <img src="assets/avatar-header.jpeg" alt="Your Logo" width="100" height="100"  style="border-radius: 50%;">
+    <a href="assets/Harshal's Resume.pdf" target="_blank" title="Explore Resume">
+      <img src="assets/avatar-header.jpeg" alt="Your Logo" width="100" height="100"  style="border-radius: 50%;" >
+    </a>
   </div>
   <button class="theme-switcher" (click)="toggleDarkTheme()">
-    <i class="fas fa-adjust"></i> <!-- Use a Font Awesome icon for the theme switcher -->
+    <i class="fas fa-adjust" title="Switch Theme"></i> <!-- Use a Font Awesome icon for the theme switcher -->
   </button>
   <nav>
     <ul>
       <li><a (click)="scrollTo('home')">Home</a></li>
+      <li><a (click)="scrollTo('about')">About</a></li>
       <li><a (click)="scrollTo('skills')">Skills</a></li>
       <li><a (click)="scrollTo('projects')">Projects</a></li>
       <li><a (click)="scrollTo('contact')">Contact</a></li>
+      <!-- <li><a href="assets/Harshal's Resume.pdf" target="_blank">Resume</a></li> -->
     </ul>
   </nav>
 </header>

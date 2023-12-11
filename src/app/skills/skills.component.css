@@ -1,29 +1,115 @@
-/* skills.component.css */
-section {
-  padding: 2rem;
+/* Styles for the Skills section */
+.skills-container {
+  margin-top: 50px; /* Adjust margin as needed */
+  text-align: center; /* Center align the entire section */
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 0; /* Add margin between categories */
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px;
+  width: 600px; /* Adjust width as needed */
+}
+
+.reverse-order {
+  flex-direction: row-reverse; /* Reverse the order of flex items for odd indices */
+}
+
+.category-name {
+  width: 100%;
+  transform: translateY(100%);
+}
+
+.category-name h3 {
+  font-size: 1.8em; /* Increase font size */
+  margin-bottom: 15px; /* Increase margin below the category name */
+  color: var(--secondary-color); /* Add the desired color for consistency with 'About Me' */
+}
+
+.right-aligned{
+  text-align: right;
+  /* margin-left: 350px; */
+}
+
+.left-aligned{
+  text-align: left;
+  /* margin-right: 350px; */
 }
 
 .skill-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  flex: 1; /* Allow the skill list to take remaining space */
 }
 
-.skill-card {
+ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+}
+
+li {
   display: flex;
   align-items: center;
-  border: 1px solid #ddd;
-  padding: 1rem;
+  margin: 15px 0; /* Increase margin between skills */
 }
 
-.skill-info {
-  flex-grow: 1;
-  margin-left: 1rem; /* Add margin between icon and skill info */
-}
-
-/* Increase the icon size */
-.fa-2x {
+li i {
   font-size: 2em;
+  margin-right: 10px; /* Add margin between icon and skill info */
 }
 
-/* Add additional styling as needed */
+.skill-info h4 {
+  margin: 0; /* Remove default margin for h4 */
+}
+
+.skill-card:hover {
+  transform: scale(1.1); /* Increase the scale on hover for a zoom effect */
+}
+
+/* Existing styles remain unchanged */
+
+.skill-pair {
+  display: flex;
+}
+
+.skill {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin: 15px;
+}
+
+.skills-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+/* .skills-container h2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  bottom: -15px;
+  left: 0;
+} */
+
+.skill-set {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Adjust the spacing as needed */
+.skill-set .skill {
+  width: 30%; /* Set the width based on the number of skills in each row */
+}
+
+/* Adjust as needed */

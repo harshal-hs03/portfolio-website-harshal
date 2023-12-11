@@ -8,13 +8,14 @@ import { ContactModule } from "./contact/contact.module";
 import { ThemeService } from './services/theme.service';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { AboutModule } from './about/about.module';
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [CommonModule, RouterOutlet, HeaderComponent, ProjectsModule, SkillsModule, ContactModule]
+    imports: [CommonModule, RouterOutlet, HeaderComponent, ProjectsModule, SkillsModule, ContactModule, AboutModule]
 })
 export class AppComponent implements OnInit {
   title = 'portfolio-website-harshal';

@@ -9,99 +9,279 @@ import { ThemeService } from '../services/theme.service';
   styleUrl: './skills.component.css'
 })
 export class SkillsComponent {
+
   // constructor(public themeService: ThemeService) {}
 
   // toggleDarkTheme(): void {
   //   this.themeService.toggleDarkTheme();
   // }
 
-  skills: Skill[] = [
+  // hasSkillsInCategory(category: string): boolean {
+  //   return this.skills.some(skill => skill.category === category);
+  // }
+
+  hasSkillsInCategoryTesting() {
+    return this.testing.length > 0
+  }
+
+  hasSkillsInCategoryFrontEnd() {
+    return this.frontend.length > 0;
+  }
+
+  hasSkillsInCategoryBackEnd() {
+    return this.backend.length > 0;
+  }
+  hasSkillsInCategoryDatabases() {
+    return this.databases.length > 0;
+  }
+  hasSkillsInCategoryTools() {
+    return this.tools.length > 0;
+  }
+
+  backend: Skill[] = [
     {
       title: 'Java',
-      description: 'Strong foundation in Java programming language.',
+      // description: 'Strong foundation in Java programming language.',
       iconClass: 'fab fa-java', // FontAwesome icon class for Java
+      category: 'Back-end'
     },
     {
       title: 'Spring Framework',
-      description: 'Experience with Spring Boot for building web applications.',
+      // description: 'Experience with Spring Boot for building web applications.',
       iconClass: 'fas fa-code', // FontAwesome icon class for code (adjust as needed)
+      category: 'Back-end'
     },
     {
       title: 'Microservices',
-      description: 'Proficient in building modern web applications with Angular.',
-      iconClass: 'fab fa-microservices', // FontAwesome icon class for Angular
-    },
-    {
-      title: 'Angular',
-      description: 'Proficient in building modern web applications with Angular.',
-      iconClass: 'fab fa-angular', // FontAwesome icon class for Angular
-    },
-    {
-      title: 'Git',
-      description: 'Proficient in building modern web applications with Angular.',
-      iconClass: 'fab fa-git', // FontAwesome icon class for Angular
-    },
-    {
-      title: 'Javascript',
-      description: 'Proficient in building modern web applications with Angular.',
-      iconClass: 'fab fa-js-square', // FontAwesome icon class for Angular
-    },
-    {
-      title: 'HTML',
-      description: 'Proficient in building modern web applications with Angular.',
-      iconClass: 'fab fa-html5', // FontAwesome icon class for Angular
-    },
-    {
-      title: 'CSS',
-      description: 'Proficient in building modern web applications with Angular.',
-      iconClass: 'fab fa-css3-alt', // FontAwesome icon class for Angular
+
+      iconClass: 'fas fa-server', // FontAwesome icon class for Angular
+      category: 'Back-end'
     },
     {
       title: 'Hibernate',
-      description: 'Proficient in building modern web applications with Angular.',
-      iconClass: 'fab fa-hibernate', // FontAwesome icon class for Angular
-    },
-    {
-      title: 'Docker',
-      description: 'Proficient in building modern web applications with Angular.',
-      iconClass: 'fab fa-docker', // FontAwesome icon class for Angular
+
+      iconClass: 'fas fa-code', // FontAwesome icon class for Angular
+      category: 'Back-end'
     },
     {
       title: 'Soap',
-      description: 'Proficient in building modern web applications with Angular.',
+
       iconClass: 'fab fa-soap', // FontAwesome icon class for Angular
+      category: 'Back-end'
     },
     {
       title: 'REST',
-      description: 'Proficient in building modern web applications with Angular.',
+
       iconClass: 'fas fa-sync-alt', // FontAwesome icon class for Angular
+      category: 'Back-end'
+    },
+    {
+      title: 'Struts',
+
+      iconClass: 'fas fa-project-diagram', // FontAwesome icon class for Angular
+      category: 'Back-end'
+    },
+    {
+      title: 'Apache Kafka',
+
+      iconClass: 'fas fa-exchange-alt', // FontAwesome icon class for Angular
+      category: 'Back-end'
+    },
+    {
+      title: 'JavaFx',
+
+      iconClass: 'fas fa-desktop', // FontAwesome icon class for Angular
+      category: 'Back-end'
+    },
+  ];
+
+  databases: Skill[] = [
+    {
+      title: 'MSSQL',
+
+      iconClass: 'fab fa-microsoft', // FontAwesome icon class for Angular
+      category: 'Databases'
+    },
+    {
+      title: 'MySQL',
+
+      iconClass: 'fas fa-database', // FontAwesome icon class for Angular
+      category: 'Databases'
+    },
+    {
+      title: 'Oracle',
+
+      iconClass: 'fas fa-database', // FontAwesome icon class for Angular
+      category: 'Databases'
+    },
+    {
+      title: 'NoSQL',
+
+      iconClass: 'fas fa-table', // FontAwesome icon class for Angular
+      category: 'Databases'
+    },
+    {
+      title: 'Sqlite',
+
+      iconClass: 'fas fa-database', // FontAwesome icon class for Angular
+      category: 'Databases'
+    },
+  ];
+
+  frontend: Skill[] = [
+    {
+      title: 'Angular',
+
+      iconClass: 'fab fa-angular', // FontAwesome icon class for Angular
+      category: 'Front-end'
+    },
+    {
+      title: 'Javascript',
+
+      iconClass: 'fab fa-js-square', // FontAwesome icon class for Angular
+      category: 'Front-end'
+    },
+    {
+      title: 'HTML',
+
+      iconClass: 'fab fa-html5', // FontAwesome icon class for Angular
+      category: 'Front-end'
+    },
+    {
+      title: 'CSS',
+
+      iconClass: 'fab fa-css3-alt', // FontAwesome icon class for Angular
+      category: 'Front-end'
+    },
+    {
+      title: 'jQuery',
+
+      iconClass: 'fab fa-js-square', // FontAwesome icon class for Angular
+      category: 'Front-end'
+    },
+    {
+      title: 'Bootstrap',
+
+      iconClass: 'fab fa-bootstrap', // FontAwesome icon class for Angular
+      category: 'Front-end'
+    },
+    {
+      title: 'Material UI',
+
+      iconClass: 'fas fa-palette', // FontAwesome icon class for Angular
+      category: 'Front-end'
+    },
+    {
+      title: 'Typescript',
+
+      iconClass: 'fas fa-code', // FontAwesome icon class for Angular
+      category: 'Front-end'
+    },
+  ];
+
+  testing: Skill[] = [
+    {
+      title: 'TestNG',
+
+      iconClass: 'fas fa-check-circle', // FontAwesome icon class for Angular
+      category: 'Testing'
+    },
+    {
+      title: 'Selenium',
+
+      iconClass: 'fas fa-globe', // FontAwesome icon class for Angular
+      category: 'Testing'
+    },
+    {
+      title: 'Groovy',
+
+      iconClass: 'fas fa-code', // FontAwesome icon class for Angular
+      category: 'Testing'
+    },
+    {
+      title: 'JUnit',
+
+      iconClass: 'fab fa-java', // FontAwesome icon class for Angular
+      category: 'Testing'
+    },
+  ];
+
+  tools: Skill[] = [
+    {
+      title: 'Git',
+
+      iconClass: 'fab fa-git', // FontAwesome icon class for Angular
+      category: 'Tools'
+    },
+
+    {
+      title: 'Docker',
+
+      iconClass: 'fab fa-docker', // FontAwesome icon class for Angular
+      category: 'Tools'
     },
     {
       title: 'Apache SVN',
-      description: 'Proficient in building modern web applications with Angular.',
-      iconClass: 'fab fa-subversion', // FontAwesome icon class for Angular
+
+      iconClass: 'fas fa-code', // FontAwesome icon class for Angular
+      category: 'Tools'
     },
     {
       title: 'Maven',
-      description: 'Proficient in building modern web applications with Angular.',
-      iconClass: 'fab fa-maven', // FontAwesome icon class for Angular
+
+      iconClass: 'fas fa-code', // FontAwesome icon class for Angular
+      category: 'Tools'
     },
     {
       title: 'Gradle',
-      description: 'Proficient in building modern web applications with Angular.',
-      iconClass: 'fab fa-gradle', // FontAwesome icon class for Angular
+
+      iconClass: 'fas fa-code', // FontAwesome icon class for Angular
+      category: 'Tools'
     },
     {
       title: 'Apache Tomcat',
-      description: 'Proficient in building modern web applications with Angular.',
-      iconClass: 'fab fa-tomcat', // FontAwesome icon class for Angular
+
+      iconClass: 'fas fa-server', // FontAwesome icon class for Angular
+      category: 'Tools'
+    },
+    {
+      title: 'Jira',
+
+      iconClass: 'fab fa-atlassian', // FontAwesome icon class for Angular
+      category: 'Tools'
     },
     // Add more skills as needed
   ];
+
+  skillCategories = [
+    {
+      name: 'FRONT-END',
+      skills: this.frontend,
+    },
+    {
+      name: 'BACK-END',
+      skills : this.backend,
+    },
+    {
+      name: 'DATABASES',
+      skills: this.databases,
+    },
+    {
+      name: 'TESTING',
+      skills: this.testing,
+    },
+    {
+      name: 'TOOLS',
+      skills: this.tools,
+    },
+    // Add more categories as needed
+  ];
+
 }
 
 interface Skill {
   title: string;
-  description: string;
   iconClass: string; // FontAwesome icon class
+  category: string;
 }
+

@@ -17,6 +17,12 @@ section {
 .project-card {
   border: 1px solid #ddd;
   padding: 1rem;
+  /* background-color: var(--background-color); */
+  background-color: transparent;
+}
+
+.project-card:hover {
+  transform: scale(1.1); /* Increase the scale on hover for a zoom effect */
 }
 
 .project-info {
@@ -24,4 +30,10 @@ section {
   flex-direction: column;
 }
 
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
 /* Add additional styling as needed */
